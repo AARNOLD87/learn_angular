@@ -1,0 +1,7 @@
+<br>
+<div class="content">
+  <button type="button" class="btn btn-success" (click)="create()">ADD NEW DOG</button>
+</div>
+<br>
+<app-doglist [dogs]="dogs" (editEvent)="onEdit($event)" (deleteEvent)="onDelete($event)"></app-doglist>
+<app-dog *ngIf="showDog" [dog]="selectedDog" (saveEvent)="onSave($event)" (cancelEvent)="onCancel()"></app-dog>

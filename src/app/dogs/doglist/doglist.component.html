@@ -1,0 +1,17 @@
+<table class="table table-striped">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th></th>
+  </tr>
+  <tr *ngFor='let item of dogs' >
+    <td>{{item.name}}</td>
+    <td>{{item.age}}</td>
+    <td>
+      <button type="button" class="btn btn-warning " (click)="edit(item)">
+        <i class="glyphicon glyphicon-pencil" aria-hidden="true"></i>EDIT
+      </button>
+      <button type="button" class="btn btn-danger" (click)="delete(item)">DELETE</button>
+    </td>
+  </tr>
+</table>

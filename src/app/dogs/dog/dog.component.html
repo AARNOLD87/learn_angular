@@ -1,0 +1,15 @@
+<div>
+  <form #form="ngForm" (submit)="save()" novalidate>
+    <div class="form-group">
+      <label for="inputName" [class.is-invalid]="inputName.invalid">Name</label>
+      <input #inputName="ngModel"  type="text" name="inputName" class="form-control" required [(ngModel)]="_dog.name" [class.is-invalid]="inputName.invalid" id="inputName" placeholder="Name">
+    </div>
+    <div class="form-group">
+      <label for="inputAge">Age</label>
+      <input type="number" name="inputAge" [(ngModel)]="_dog.age" class="form-control" id="inputAge" placeholder="Age">
+    </div>
+
+    <button [disabled]="form.invalid" type="submit" class="btn btn-primary">SAVE</button>
+    <button type="button" class="btn btn-danger" (click)="cancel()">CANCEL</button>
+  </form>
+</div>
