@@ -9,7 +9,7 @@ export class DogApiService {
 
   private extractData(res: Response) {
     let body = res.json();
-    let breeds[];
+    let breeds = [];
 
     for (let item in body.message) {
       breeds.push(item);
