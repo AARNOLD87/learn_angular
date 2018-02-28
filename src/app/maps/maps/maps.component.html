@@ -1,0 +1,28 @@
+<table class="table-sm">
+  <tr>
+    <td valign="top">
+      <div class="content-fluid">
+        <form #form="ngForm" >
+            <div class="form-group">
+                <input type="text" [(ngModel)]="search" class="form-control" name="searchText" id="searchText" placeholder="Name of city"/>
+                <br>
+                <button (click)="clicca()" class="btn btn-primary" style="width:100%">SEARCH</button>
+            </div>
+            <div>
+              Lat : <label for="latLabel">{{city.lat}}</label>
+              <br>
+              Long : <label for="lngLabel">{{city.long}}</label>
+              <br>
+            </div>
+          </form>
+      </div>
+    </td>
+    <td width="500px" align="center">
+        <agm-map style="width:500px;height:500px" [latitude]="city.lat" [longitude]="city.long">
+          <agm-marker [latitude]="city.lat" [longitude]="city.long"></agm-marker>
+        </agm-map>
+      </td>
+  </tr>
+</table>
+
+

@@ -11,6 +11,8 @@ import { DogsComponent } from './dogs/dogs.component';
 import { DogComponent } from './dogs/dog/dog.component';
 import { DogApiService } from './services/dog-api.service';
 import { PageNotFoundComponent } from './page_not_found/pagenotfound.component';
+import { MapsModule } from './maps/maps.module';
+import { MapsComponent } from './maps/maps/maps.component';
 
 
 @NgModule({
@@ -26,9 +28,11 @@ import { PageNotFoundComponent } from './page_not_found/pagenotfound.component';
     BrowserModule,
     HttpModule,
     FormsModule,
+    MapsModule,
     RouterModule.forRoot([
       { path : '', component: DogsComponent },
       { path : 'dogs', component: DogsComponent },
+      { path : 'maps', component: MapsComponent },
       { path : '**', component: PageNotFoundComponent }
     ])
   ],

@@ -8,8 +8,8 @@ export class DogApiService {
   constructor(private http: Http) { }
 
   private extractData(res: Response) {
-    let body = res.json();
-    let breeds = [];
+    const body = res.json();
+    const breeds = [];
 
     for (let item in body.message) {
       breeds.push(item);
@@ -19,7 +19,7 @@ export class DogApiService {
   }
 
   private extractPhoto(res: Response): string {
-    let body = res.json();
+    const body = res.json();
     return body.message;
   }
 

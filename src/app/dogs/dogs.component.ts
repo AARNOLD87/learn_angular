@@ -26,7 +26,7 @@ export class DogsComponent {
   }
 
   onSave($event) {
-    let index = this.dogs.findIndex(i => i.cipCode === $event.cipCode );
+    const index = this.dogs.findIndex(i => i.cipCode === $event.cipCode );
     if ( index === -1 ) {
       this.dogs.push($event);
       this.cipCounter++;
