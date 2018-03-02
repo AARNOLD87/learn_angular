@@ -13,6 +13,8 @@ import { DogApiService } from './services/dog-api.service';
 import { PageNotFoundComponent } from './page_not_found/pagenotfound.component';
 import { MapsModule } from './maps/maps.module';
 import { MapsComponent } from './maps/maps/maps.component';
+import { MathlabModule } from './mathlab/mathlab.module';
+import { MathlabComponent } from './mathlab/mathlab.component';
 
 
 @NgModule({
@@ -29,10 +31,12 @@ import { MapsComponent } from './maps/maps/maps.component';
     HttpModule,
     FormsModule,
     MapsModule,
+    MathlabModule,
     RouterModule.forRoot([
       { path : '', component: DogsComponent },
       { path : 'dogs', component: DogsComponent },
       { path : 'maps', component: MapsComponent },
+      { path : 'mathlab', component: MathlabComponent },
       { path : '**', component: PageNotFoundComponent }
     ])
   ],

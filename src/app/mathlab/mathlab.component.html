@@ -1,0 +1,9 @@
+<div style="margin:20px">
+    <form #form="ngForm" (submit)="calculate()" novalidate>
+      <input type="text" [(ngModel)]="exp" id="inputExp" name="inputExp" class="form-control" placeholder="Insert exp to evaluate">
+      <br>
+      <span>Result = </span><span> {{result}}</span>
+      <br><br>
+      <button type="submit" class="btn btn-primary">CALCULATE</button>
+    </form>
+</div>
